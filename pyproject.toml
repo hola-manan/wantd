@@ -1,0 +1,22 @@
+[project]
+name = "wantd"
+version = "0.1.0"
+description = "Reel understanding pipeline: tiered Gemini extraction for Instagram reels and YouTube Shorts"
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=1.20",
+    "yt-dlp",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["wantd"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
